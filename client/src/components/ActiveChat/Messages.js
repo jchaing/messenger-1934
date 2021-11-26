@@ -2,12 +2,9 @@ import React from "react";
 import { Box } from "@material-ui/core";
 import { SenderBubble, OtherUserBubble } from "../ActiveChat";
 import moment from "moment";
-import { sortByIdAscend } from '../../utils/helperFunctions'
 
 const Messages = (props) => {
   const { messages, otherUser, userId } = props;
-
-  sortByIdAscend(messages);
 
   return (
     <Box>

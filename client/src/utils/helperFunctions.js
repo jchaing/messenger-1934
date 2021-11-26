@@ -1,3 +1,3 @@
-export const sortByIdAscend = (arr) => {
-  return arr.sort((a, b) => a.id - b.id);
+export const sortByTimestampAscend = (arr) => {
+  return arr.sort((a, b) => a.createdAt.localeCompare(b.createdAt));
 };

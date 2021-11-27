@@ -7,7 +7,6 @@ import {
   setSearchedUsers,
 } from "../conversations";
 import { gotUser, setFetchingStatus } from "../user";
-import {sortByTimestampAscend} from "../../utils/helperFunctions"
 
 axios.interceptors.request.use(async function (config) {
   const token = await localStorage.getItem("messenger-token");
@@ -74,7 +73,9 @@ export const fetchConversations = () => async (dispatch) => {
   try {
     const { data } = await axios.get("/api/conversations");
     data.forEach((conversation) => {
-      conversation.messages = sortByTimestampAscend(conversation.messages);
+      conversation.messages.sort((a, b) =>
+        a.createdAt.localeCompare(b.createdAt)
+      );
     });
     dispatch(gotConversations(data));
   } catch (error) {

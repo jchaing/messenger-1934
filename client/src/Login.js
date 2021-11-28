@@ -8,12 +8,24 @@ import {
   Button,
   FormControl,
   TextField,
+  makeStyles
 } from "@material-ui/core";
 import { login } from "./store/utils/thunkCreators";
+import SideBanner from "./SideBanner";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    position: "relative",
+    width: "1024px",
+    height: "700px",
+    background: "#FFFFFF",
+  },
+}));
 
 const Login = (props) => {
   const history = useHistory();
   const { user, login } = props;
+  const classes = useStyles();
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -28,6 +40,8 @@ const Login = (props) => {
   }
 
   return (
+    <Grid container className={classes.root}>
+    <SideBanner />
     <Grid container justify="center">
       <Box>
         <Grid container item>
@@ -62,6 +76,7 @@ const Login = (props) => {
           </Grid>
         </form>
       </Box>
+    </Grid>
     </Grid>
   );
 };

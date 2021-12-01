@@ -21,6 +21,238 @@ const useStyles = makeStyles(() => ({
     height: "700px",
     background: "#FFFFFF",
   },
+  loginAccount: {
+    position: "absolute",
+    width: "336px",
+    height: "54px",
+    left: "646px",
+    top: "30px",
+  },
+  haveAccount: {
+    position: "absolute",
+    height: "19px",
+    left: "0%",
+    right: "50.6%",
+    top: "calc(50% - 19px/2 + 1.38px)",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "14px",
+    lineHeight: "19px",
+    /* identical to box height */
+    textAlign: "center",
+    color: "#B0B0B0",
+  },
+  loginButtonGrid: {
+    position: "absolute",
+    left: "58.33%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
+  },
+  loginButton: {
+    position: "absolute",
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
+    background: "#FFFFFF",
+    borderRadius: "5px",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "14px",
+    lineHeight: "19px",
+    textAlgin: "center",
+    color: "#3A8DFF",
+    paddingLeft: "52px",
+    paddingRight: "51px",
+    paddingTop: "16px",
+    paddingBottom: "19px",
+    "&:hover": {
+      boxShadow: "0px 2px 12px rgba(74, 106, 149, 0.2)",
+    },
+  },
+  form: {
+    position: "absolute",
+    width: "380px",
+    height: "544px",
+    left: "522px",
+    top: "150px",
+  },
+  createAnAccount: {
+    position: "absolute",
+    height: "40px",
+    left: "0%",
+    right: "37.89%",
+    // top: "calc(50% - 40px/2 - 192px)",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "26px",
+    lineHeight: "40px",
+    /* identical to box height, or 154% */
+    color: "#000000",
+  },
+  usernameGrid: {
+    position: "absolute",
+    left: "0%",
+    right: "0%",
+    top: "12.26%",
+    bottom: "72.17%",
+  },
+  usernameLabel: {
+    "&.shrink": {
+      position: "absolute",
+      height: "19px",
+      left: "1.32%",
+      top: "calc(50% - 19px/2 - 23.5px)",
+      fontFamily: "Open Sans",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      fontSize: "19px",
+      lineHeight: "19px",
+      /* identical to box height */
+      color: "#B0B0B0",
+    },
+  },
+  usernameText: {
+    height: "19px",
+    paddingLeft: "1.32%",
+    paddingTop: "19.18px",
+    right: "61.05%",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "14px",
+    lineHeight: "19px",
+    /* identical to box height */
+    color: "#000000",
+  },
+  emailGrid: {
+    position: "absolute",
+    left: "0%",
+    right: "0%",
+    top: "32.26%",
+    bottom: "47.41%",
+  },
+  emailLabel: {
+    "&.shrink": {
+      position: "absolute",
+      height: "19px",
+      left: "1.32%",
+      top: "calc(50% - 19px/2 - 23px)",
+      fontFamily: "Open Sans",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      fontSize: "19px",
+      lineHeight: "19px",
+      /* identical to box height */
+      color: "#B0B0B0",
+    },
+  },
+  emailText: {
+    height: "19px",
+    paddingLeft: "1.32%",
+    paddingTop: "20.18px",
+    right: "61.05%",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "14px",
+    lineHeight: "19px",
+    /* identical to box height */
+    color: "#000000",
+  },
+  passwordGrid: {
+    position: "absolute",
+    left: "0%",
+    right: "0%",
+    top: "52.03%",
+    bottom: "22.64%",
+  },
+  passwordLabel: {
+    "&.shrink": {
+      position: "absolute",
+      height: "19px",
+      left: "1.32%",
+      top: "calc(50% - 19px/2 - 23px)",
+      fontFamily: "Open Sans",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      fontSize: "19px",
+      lineHeight: "19px",
+      /* identical to box height */
+      color: "#B0B0B0",
+    },
+  },
+  passwordText: {
+    height: "19px",
+    paddingLeft: "1.32%",
+    paddingTop: "20.18px",
+    right: "61.05%",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "20px",
+    lineHeight: "19px",
+    /* identical to box height */
+    color: "#000000",
+  },
+  confirmPasswordGrid: {
+    position: "absolute",
+    left: "0%",
+    right: "0%",
+    top: "71.79%",
+  },
+  confirmPasswordLabel: {
+    "&.shrink": {
+      position: "absolute",
+      height: "19px",
+      left: "1.32%",
+      top: "calc(50% - 19px/2 - 23px)",
+      fontFamily: "Open Sans",
+      fontStyle: "normal",
+      fontWeight: "normal",
+      fontSize: "19px",
+      lineHeight: "19px",
+      /* identical to box height */
+      color: "#B0B0B0",
+    },
+  },
+  confirmPasswordText: {
+    height: "19px",
+    paddingLeft: "1.32%",
+    paddingTop: "20.18px",
+    right: "61.05%",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "600",
+    fontSize: "20px",
+    lineHeight: "19px",
+    /* identical to box height */
+    color: "#000000",
+  },
+  createButtonGrid: {
+    position: "absolute",
+    left: "28.95%",
+    right: "28.95%",
+    top: "88.55%",
+    bottom: "0%",
+  },
+  createButton: {
+    position: "absolute",
+    top: "0%",
+    left: "0%",
+    right: "0%",
+    bottom: "0%",
+    borderRadius: "3px",
+    fontFamily: "Open Sans",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    fontSize: "16px",
+    lineHeight: "22px",
+  },
 }));
 
 const Login = (props) => {
@@ -53,67 +285,136 @@ const Login = (props) => {
     <SideBanner />
     <Grid container justify="center">
       <Box>
-        <Grid container item>
-          <Typography>Need to log in?</Typography>
-          <Button onClick={() => history.push("/login")}>Login</Button>
+        <Grid container item className={classes.loginAccount}>
+          <Typography className={classes.haveAccount}>
+            Already have an account?
+          </Typography>
+          <Grid className={classes.loginButtonGrid}>
+            <Button
+              className={classes.loginButton}
+              onClick={() => history.push("/login")}
+            >
+              Login
+            </Button>
+          </Grid>
         </Grid>
         <form onSubmit={handleRegister}>
-          <Grid>
-            <Grid>
-              <FormControl>
+          <Grid className={classes.form}>
+            <Typography className={classes.createAnAccount}>
+              Create an account.
+            </Typography>
+            <Grid className={classes.usernameGrid}>
+              <FormControl fullWidth="true" required>
                 <TextField
                   aria-label="username"
                   label="Username"
                   name="username"
                   type="text"
-                  required
+                  InputProps={{
+                    classes: {
+                      input: classes.usernameText
+                    }
+                  }}
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.usernameLabel,
+                      shrink: "shrink"
+                    }
+                  }}
                 />
               </FormControl>
             </Grid>
-            <Grid>
-              <FormControl>
+            <Grid className={classes.emailGrid}>
+              <FormControl fullWidth="true" required>
                 <TextField
                   label="E-mail address"
                   aria-label="e-mail address"
                   type="email"
                   name="email"
-                  required
+                  InputProps={{
+                    classes: {
+                      input: classes.emailText
+                    }
+                  }}
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.emailLabel,
+                      shrink: "shrink"
+                    }
+                  }}
                 />
               </FormControl>
             </Grid>
-            <Grid>
-              <FormControl error={!!formErrorMessage.confirmPassword}>
+            <Grid className={classes.passwordGrid}>
+              <FormControl 
+                error={!!formErrorMessage.confirmPassword}
+                fullWidth="true"
+                required
+              >
                 <TextField
                   aria-label="password"
                   label="Password"
                   type="password"
                   inputProps={{ minLength: 6 }}
                   name="password"
-                  required
+                  InputProps={{
+                    classes: {
+                      input: classes.passwordText
+                    }
+                  }}
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.passwordLabel,
+                      shrink: "shrink"
+                    }
+                  }}
                 />
                 <FormHelperText>
                   {formErrorMessage.confirmPassword}
                 </FormHelperText>
               </FormControl>
             </Grid>
-            <Grid>
-              <FormControl error={!!formErrorMessage.confirmPassword}>
+            <Grid className={classes.confirmPasswordGrid}>
+              <FormControl 
+                error={!!formErrorMessage.confirmPassword}
+                fullWidth="true"
+                required
+              >
                 <TextField
                   label="Confirm Password"
                   aria-label="confirm password"
                   type="password"
                   inputProps={{ minLength: 6 }}
                   name="confirmPassword"
-                  required
+                  InputProps={{
+                    classes: {
+                      input: classes.confirmPasswordText
+                    }
+                  }}
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.confirmPasswordLabel,
+                      shrink: "shrink"
+                    }
+                  }}
                 />
                 <FormHelperText>
                   {formErrorMessage.confirmPassword}
                 </FormHelperText>
               </FormControl>
             </Grid>
-            <Button type="submit" variant="contained" size="large">
-              Create
-            </Button>
+            <Grid className={classes.createButtonGrid}>
+              <Button
+                color="primary"
+                className={classes.createButton}
+                type="submit"
+                variant="contained"
+                size="large"
+                fullWidth="true"
+              >
+                Create
+              </Button>
+            </Grid>
           </Grid>
         </form>
       </Box>

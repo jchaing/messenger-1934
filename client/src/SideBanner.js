@@ -11,6 +11,9 @@ const useStyles = makeStyles(() => ({
     height: "700px",
     left: "0px",
     top: "0px",
+    "@media screen and (max-width: 1024px)": {
+      left: "27%",
+    },
   },
   background: {
     position: "absolute",
@@ -27,14 +30,14 @@ const useStyles = makeStyles(() => ({
     width: "425px",
     height: "700px",
     left: "0px",
-    top: "0px"
+    top: "0px",
   },
   box: {
     position: "absolute",
     width: "269px",
     height: "186px",
     left: "77.71px",
-    top: "199px"
+    top: "199px",
   },
   chat: {
     position: "absolute",
@@ -61,7 +64,7 @@ const useStyles = makeStyles(() => ({
 const SideBanner = () => {
   const classes = useStyles();
   return (
-    <Grid container justify="center" className={classes.root}>
+    <Grid container item justifyContent="center" className={classes.root}>
       <img src={bgImage} alt="Background" className={classes.image} />
       <Grid className={classes.background}>
         <Box className={classes.box}>

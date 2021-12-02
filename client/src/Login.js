@@ -19,6 +19,15 @@ const useStyles = makeStyles(() => ({
     width: "1024px",
     height: "700px",
     background: "#FFFFFF",
+    "@media screen and (max-width: 1024px)": {
+      background: `linear-gradient(180deg, #3A8DFF 0%, #86B9FF 100%)`,
+    },
+  },
+  loginGrid: {
+    position: "relative",
+    "@media screen and (max-width: 1024px)": {
+      top: "100%",
+    },
   },
   createAccount: {
     position: "absolute",
@@ -26,6 +35,9 @@ const useStyles = makeStyles(() => ({
     height: "54px",
     left: "631px",
     top: "30px",
+    "@media screen and (max-width: 1024px)": {
+      left: "431px",
+    },
   },
   noAccount: {
     position: "absolute",
@@ -78,6 +90,9 @@ const useStyles = makeStyles(() => ({
     height: "358px",
     left: "522px",
     top: "170px",
+    "@media screen and (max-width: 1024px)": {
+      left: "322px"
+    },
   },
   welcomeBack: {
     position: "absolute",
@@ -226,7 +241,7 @@ const Login = (props) => {
   return (
     <Grid container className={classes.root}>
     <SideBanner />
-    <Grid container justify="center">
+    <Grid item className={classes.loginGrid} justifyContent="center">
       <Box>
         <Grid container className={classes.createAccount}>
           <Typography className={classes.noAccount}>

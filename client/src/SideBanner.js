@@ -1,78 +1,71 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
-import { Grid, Box, Typography } from "@material-ui/core";
+import { Grid, Box, Typography, makeStyles } from "@material-ui/core";
 import bgImage from "./assets/bg-img.png";
 import svgChatIcon from "./assets/bubble.svg";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    position: "absolute",
-    width: "425px",
-    height: "700px",
-    left: "0px",
-    top: "0px",
-    "@media screen and (max-width: 1024px)": {
-      left: "27%",
+const useStyles = makeStyles((theme) => ({
+  image: {
+    backgroundImage: `url(${bgImage})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "100vw",
+    height: "100vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "47vh",
+      backgroundPosition: "top",
     },
   },
   background: {
-    position: "absolute",
-    width: "425px",
-    height: "700px",
-    left: "0px",
-    top: "0px",
     background: `linear-gradient(180deg, #3A8DFF 0%, #86B9FF 100%)`,
     mixBlendMode: "normal",
     opacity: "0.85",
+    height: "100vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "47vh",
+    },
   },
-  image: {
-    position: "absolute",
-    width: "425px",
-    height: "700px",
-    left: "0px",
-    top: "0px",
-  },
-  box: {
-    position: "absolute",
-    width: "269px",
-    height: "186px",
-    left: "77.71px",
-    top: "199px",
+  logoGrid: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingBottom: "325px",
+    [theme.breakpoints.down("xs")]: {
+      height: "57vh",
+      paddingBottom: "0px"
+    },
   },
   chat: {
-    position: "absolute",
-    width: "67px",
-    height: "67px",
-    left: "101.67px",
-    top: "0px",
+    marginBottom: "40px",
   },
   typography: {
-    position: "absolute",
-    height: "80px",
-    left: "0%",
-    right: "0%",
     top: "calc(50% - 80px/2 + 53px)",
-    fontFamily: "Open Sans",
+    fontFamily: theme.typography.fontFamily,
     fontStyle: "normal",
     fontSize: "26px",
     lineHeight: "40px",
     textAlign: "center",
     color: "#FFFFFF",
+    maxWidth: "300px",
   },
 }));
 
 const SideBanner = () => {
   const classes = useStyles();
   return (
-    <Grid container item justifyContent="center" className={classes.root}>
-      <img src={bgImage} alt="Background" className={classes.image} />
-      <Grid className={classes.background}>
-        <Box className={classes.box}>
-          <img src={svgChatIcon} className={classes.chat} alt="Chat Bubble Icon" />
-          <Typography className={classes.typography} justify="center">
-            Converse with anyone with any language
-          </Typography>
-        </Box>
+    <Grid item container xs={12} sm={5}>
+      <Grid container className={classes.image}>
+        <Grid container className={classes.background}>
+          <Grid container item direction="column" className={classes.logoGrid}>
+            <Box>
+              <Grid align="center" className={classes.chat}>
+                <img src={svgChatIcon} alt="Chat Bubble Icon" />
+              </Grid>
+              <Typography className={classes.typography}>
+                Converse with anyone with any language
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

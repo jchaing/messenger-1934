@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   background: {
-    background: `linear-gradient(180deg, #3A8DFF 0%, #86B9FF 100%)`,
+    background: `linear-gradient(180deg, ${theme.palette.primary.main} 0%, #86B9FF 100%)`,
     mixBlendMode: "normal",
     opacity: "0.85",
     height: "100vh",
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   logoGrid: {
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: "325px",
+    paddingBottom: "115px",
     [theme.breakpoints.down("xs")]: {
       height: "57vh",
       paddingBottom: "0px"

@@ -28,10 +28,10 @@ const useStyles = makeStyles((theme) => ({
   logoGrid: {
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: "115px",
+    paddingBottom: theme.spacing(14),
     [theme.breakpoints.down("xs")]: {
       height: "57vh",
-      paddingBottom: "0px"
+      paddingBottom: theme.spacing(0)
     },
   },
   chat: {
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "40px",
     textAlign: "center",
     color: "#FFFFFF",
-    maxWidth: "300px",
+    maxWidth: theme.spacing(37.5),
   },
 }));
 

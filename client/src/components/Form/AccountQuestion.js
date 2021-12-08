@@ -9,22 +9,22 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   accountQuestionGrid: {
-    height: "54px",
-    marginTop: "30px",
-    marginRight: "42px",
+    height: theme.spacing(6.75),
+    marginTop: theme.spacing(3.75),
+    marginRight: theme.spacing(5.25),
     display: "flex",
     justifyContent: "flex-end",
   },
   question: {
     display: "flex",
     alignItems: "center",
-    marginRight: "30px",
+    marginRight: theme.spacing(3.75),
     fontSize: theme.typography.fontSize,
     color: theme.palette.secondary.main,
     textAlign: "center",
     overflowWrap: "break-word",
     [theme.breakpoints.down("sm")]: {
-      width: "152px",
+      width: theme.spacing(19),
     },
   },
   accountButton: {
@@ -35,14 +35,14 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: theme.typography.lineHeight,
     textAlgin: "center",
     color: theme.palette.primary.main,
-    width: "170px",
-    height: "54px",
+    width: theme.spacing(21.25),
+    height: theme.spacing(6.75),
     boxShadow: "0px 2px 12px rgba(74, 106, 149, 0.2)",
     "&:hover": {
       border: `1px solid ${theme.palette.primary.main}`,
     },
     [theme.breakpoints.down("sm")]: {
-      width: "120px",
+      width: theme.spacing(15),
     },
   },
 }));

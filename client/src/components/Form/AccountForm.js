@@ -9,19 +9,18 @@ import FormButton from "./FormButton";
 
 const useStyles = makeStyles((theme) => ({
   form: {
-    width: "380px",
-    height: "358px",
-    marginTop: "-100px",
+    width: theme.spacing(47.5),
+    height: theme.spacing(44.75),
+    marginTop: theme.spacing(-12.5),
     [theme.breakpoints.down("sm")]: {
-      width: "320px",
+      width: theme.spacing(40),
     },
     [theme.breakpoints.down("xs")]: {
-      width: "320px",
-      marginTop: "-85%",
+      marginTop: theme.spacing(-25)
     },
   },
   message: {
-    height: "40px",
+    height: theme.spacing(5),
     fontFamily: theme.typography.fontFamily,
     fontWeight: theme.typography.fontWeight,
     fontSize: "26px",

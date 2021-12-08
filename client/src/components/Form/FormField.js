@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 const FormField = (props) => {
   const { ariaLabel, label, name, type, isLogin, formErrorMessage } = props;
   const classes = useStyles();
-  console.log("formErrorMessage", formErrorMessage);
+
   return (
     <Grid className={classes.inputGrid}>
       <FormControl

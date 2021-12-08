@@ -73,7 +73,6 @@ const Login = (props) => {
   if (user.id) {
     return <Redirect to="/home" />;
   }
-  console.log(formErrorMessage)
 
   return (
     <Grid container direction="row" className={classes.root}>

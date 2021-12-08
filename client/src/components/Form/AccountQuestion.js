@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   Grid,
   Typography,
@@ -47,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AccountQuestion = (props) => {
-  const { history, question, buttonLabel, route } = props
+  const { question, buttonLabel, route } = props
+  const history = useHistory();
   const classes = useStyles();
 
   return (

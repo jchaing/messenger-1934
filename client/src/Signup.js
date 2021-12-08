@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import {
   Grid,
@@ -50,7 +50,6 @@ const signupForm = [
 ];
 
 const Login = (props) => {
-  const history = useHistory();
   const { user, register } = props;
   const [formErrorMessage, setFormErrorMessage] = useState({});
   const classes = useStyles();
@@ -79,7 +78,6 @@ const Login = (props) => {
       <SideBanner />
       <Grid item container xs={12} sm={7} className={classes.accountGrid}>
         <AccountQuestion
-          history={history}
           question="Already have an account?"
           buttonLabel="Login"
           route="/login"

@@ -26,8 +26,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   logoGrid: {
-    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
     paddingBottom: theme.spacing(14),
     [theme.breakpoints.down("xs")]: {
       height: "57vh",
@@ -35,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   chat: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
     marginBottom: "40px",
   },
   typography: {
@@ -52,20 +58,18 @@ const useStyles = makeStyles((theme) => ({
 const SideBanner = () => {
   const classes = useStyles();
   return (
-    <Grid item container xs={12} sm={5}>
-      <Grid container className={classes.image}>
-        <Grid container className={classes.background}>
-          <Grid container item direction="column" className={classes.logoGrid}>
-            <Box>
-              <Grid align="center" className={classes.chat}>
-                <img src={svgChatIcon} alt="Chat Bubble Icon" />
-              </Grid>
-              <Typography className={classes.typography}>
-                Converse with anyone with any language
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
+    <Grid container item xs={12} sm={5} className={classes.image}>
+      <Grid container className={classes.background}>
+        <Box className={classes.logoGrid}>
+          <img
+            src={svgChatIcon}
+            alt="Chat Bubble Icon"
+            className={classes.chat}
+          />
+          <Typography className={classes.typography}>
+            Converse with anyone with any language
+          </Typography>
+        </Box>
       </Grid>
     </Grid>
   );

@@ -97,12 +97,12 @@ const FormField = (props) => {
             }}
             fullWidth="true"
           />
-          {formErrorMessage && type === "password" ? (
+          {formErrorMessage && type === "password" && (
             <FormHelperText>{formErrorMessage.confirmPassword}</FormHelperText>
-          ) : null}
-          {isLogin && type === "password" ? (
+          )}
+          {isLogin && type === "password" && (
             <Button className={classes.forgotButton}>Forgot?</Button>
-          ) : null}
+          )}
         </Grid>
       </FormControl>
     </Grid>

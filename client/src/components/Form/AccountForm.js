@@ -40,6 +40,7 @@ const AccountForm = (props) => {
         {accountForm.map((input) => {
           return (
             <FormField
+              key={input.id}
               ariaLabel={input.ariaLabel}
               label={input.label}
               name={input.name}

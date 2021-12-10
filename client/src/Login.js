@@ -24,12 +24,14 @@ const useStyles = makeStyles(() => ({
 
 const loginForm = [
   {
+    id: 1,
     ariaLabel: "username",
     label: "Username",
     name: "username",
     type: "text",
   },
   {
+    id:2,
     ariaLabel: "password",
     label: "Password",
     name: "password",

@@ -24,24 +24,28 @@ const useStyles = makeStyles(() => ({
 
 const signupForm = [
   {
+    id: 1,
     ariaLabel: "username",
     label: "Username",
     name: "username",
     type: "text",
   },
   {
+    id: 2,
     ariaLabel: "e-mail address",
     label: "E-mail address",
     name: "email",
     type: "email",
   },
   {
+    id: 3,
     ariaLabel: "password",
     label: "Password",
     name: "password",
     type: "password",
   },
   {
+    id: 4,
     ariaLabel: "confirm password",
     label: "Confirm Password",
     name: "confirmPassword",

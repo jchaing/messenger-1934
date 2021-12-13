@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { FormControl, FilledInput } from "@material-ui/core";
+import { FormControl, FilledInput, InputAdornment, SvgIcon } from "@material-ui/core";
+import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt";
 import { makeStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
 import { postMessage } from "../../store/utils/thunkCreators";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     justifySelf: "flex-end",
     marginTop: 15
@@ -14,6 +15,10 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "#F4F6FA",
     borderRadius: 8,
     marginBottom: 20
+  },
+  icon: {
+    marginRight: theme.spacing(2),
+    opacity: 0.2
   }
 }));
 
@@ -49,6 +54,15 @@ const Input = (props) => {
           value={text}
           name="text"
           onChange={handleChange}
+          endAdornment={
+            <InputAdornment position="end">
+              <SentimentSatisfiedAltIcon className={classes.icon} />
+              <SvgIcon className={classes.icon}>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+              </SvgIcon>
+            </InputAdornment>
+          }
         />
       </FormControl>
     </form>

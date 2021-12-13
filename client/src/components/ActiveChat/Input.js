@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     marginRight: theme.spacing(2),
-    opacity: 0.2
+    opacity: 0.2,
+    cursor: "copy"
   }
 }));
 

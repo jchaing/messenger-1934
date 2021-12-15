@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   input: {
     height: theme.spacing(9),
     backgroundColor: "#F4F6FA",
-    borderRadius: 8,
+    borderRadius: theme.spacing(1),
     marginBottom: theme.spacing(2),
   },
   icon: {

@@ -36,9 +36,11 @@ const useStyles = makeStyles((theme) => ({
   },
   multiImage: {
     borderRadius: "5px 5px 0px 5px",
+    cursor: "zoom-in"
   },
   singleImage: {
     borderRadius: "10px 10px 0px 10px",
+    cursor: "zoom-in"
   },
   singleImageTextBubble: {
     background: "#F4F6FA",
@@ -87,6 +89,7 @@ const SenderBubble = (props) => {
                   classesImage={classes.multiImage}
                   attachmentId={attachment.id}
                   attachmentPublicId={attachment.publicId}
+                  attachmentUrl={attachment.url}
                   width="85"
                   height="66"
                 />
@@ -114,6 +117,7 @@ const SenderBubble = (props) => {
                     classesImage={classes.singleImage}
                     attachmentId={attachment.id}
                     attachmentPublicId={attachment.publicId}
+                    attachmentUrl={attachment.url}
                     width="138"
                     height="138"
                   />

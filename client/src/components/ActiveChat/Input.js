@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.2,
     cursor: "copy",
   },
-  inputImage: {},
   image: {
     marginRight: theme.spacing(1),
     borderRadius: theme.spacing(1),
@@ -67,7 +66,7 @@ const Input = (props) => {
       showCompletedButton: true,
     },
     (error, result) => {
-      if (error) console.log(`Cloundinary Upload Error: ${error}`);
+      if (error) console.error(`Cloundinary Upload Error: ${error}`);
 
       if (result.event === "success") {
         reference.current.push({
@@ -97,8 +96,7 @@ const Input = (props) => {
           onChange={handleChange}
           startAdornment={
             <InputAdornment position="start">
-              {attachments &&
-                attachments.map((attachment) => {
+              {attachments?.map((attachment) => {
                   return (
                     <img
                       key={attachment.id}

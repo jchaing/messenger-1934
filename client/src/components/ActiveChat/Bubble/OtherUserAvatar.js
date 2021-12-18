@@ -8,7 +8,7 @@ const OtherUserAvatar = (props) => {
       alt={otherUserUsername}
       src={otherUserPhotoUrl}
       className={classesAvatar}
-    ></Avatar>
+    />
   );
 }
 

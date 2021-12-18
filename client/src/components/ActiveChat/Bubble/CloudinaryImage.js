@@ -51,8 +51,6 @@ const CloudinaryImage = (props) => {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
         onClick={handleClose}
       >
         <Box className={classes.modal}>

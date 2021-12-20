@@ -38,7 +38,7 @@ const FormButton = (props) => {
         type="submit"
         variant="contained"
         size="large"
-        fullWidth="true"
+        fullWidth={true}
       >
         {buttonText}
       </Button>

@@ -71,7 +71,7 @@ const FormField = (props) => {
       <FormControl
         error={formErrorMessage ? !!formErrorMessage.confirmPassword : null}
         margin="normal"
-        fullWidth="true"
+        fullWidth={true}
         required
       >
         <Grid>
@@ -95,7 +95,7 @@ const FormField = (props) => {
               },
               shrink: true,
             }}
-            fullWidth="true"
+            fullWidth={true}
           />
           {formErrorMessage && type === "password" && (
             <FormHelperText>{formErrorMessage.confirmPassword}</FormHelperText>

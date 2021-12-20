@@ -20,6 +20,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#BECCE2",
     fontWeight: "bold",
     marginBottom: theme.spacing(0.625),
+    order: -1
+  },
+  dateMultiImage: {
+    fontSize: 11,
+    color: "#BECCE2",
+    fontWeight: "bold",
+    marginBottom: theme.spacing(0.625),
+    order: 1,
   },
   text: {
     fontSize: 14,
@@ -33,14 +41,19 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px 10px 0 10px",
     marginBottom: theme.spacing(1.25),
     maxWidth: theme.spacing(50),
+    order: -1
   },
   multiImage: {
     borderRadius: "5px 5px 0px 5px",
-    cursor: "zoom-in"
+    cursor: "zoom-in",
+    width: "85px",
+    height: "66px",
   },
   singleImage: {
     borderRadius: "10px 10px 0px 10px",
-    cursor: "zoom-in"
+    cursor: "zoom-in",
+    width: "138px",
+    height: "138px",
   },
   singleImageTextBubble: {
     background: "#F4F6FA",
@@ -53,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     height: theme.spacing(2),
     width: theme.spacing(2),
+    order: 1
   },
 }));
 
@@ -72,71 +86,52 @@ const SenderBubble = (props) => {
         </>
       )}
 
-      {attachments && attachments.length > 1 && (
+      {attachments && (
         <>
-          {text && (
-            <BubbleText
-              classesBubble={classes.bubble}
-              classesText={classes.text}
-              text={text}
-            />
-          )}
-          <Grid container justifyContent="flex-end" spacing={1}>
-            {attachments.map((pic) => {
-              const attachment = JSON.parse(pic);
-              return (
-                <CloudinaryImage
-                  classesImage={classes.multiImage}
-                  attachmentId={attachment.id}
-                  attachmentPublicId={attachment.publicId}
-                  attachmentUrl={attachment.url}
-                  width="85"
-                  height="66"
-                />
-              );
-            })}
-          </Grid>
-          <TimeStamp classesDate={classes.date} time={time} />
-          <OtherUserAvatar
-            otherUserUsername={otherUser.username}
-            otherUserPhotoUrl={otherUser.photoUrl}
-            classesAvatar={classes.avatar}
+          <TimeStamp
+            classesDate={
+              attachments.length === 1 ? classes.date : classes.dateMultiImage
+            }
+            time={time}
           />
-        </>
-      )}
-
-      {attachments && attachments.length === 1 && (
-        <>
-          <TimeStamp classesDate={classes.date} time={time} />
           <Grid container justifyContent="flex-end" spacing={1}>
             {attachments &&
               attachments.map((pic) => {
                 const attachment = JSON.parse(pic);
                 return (
                   <CloudinaryImage
-                    classesImage={classes.singleImage}
+                    classesImage={
+                      attachments.length === 1
+                        ? classes.singleImage
+                        : classes.multiImage
+                    }
                     attachmentId={attachment.id}
                     attachmentPublicId={attachment.publicId}
                     attachmentUrl={attachment.url}
-                    width="138"
-                    height="138"
                   />
                 );
               })}
           </Grid>
           {text && (
             <BubbleText
-              classesBubble={classes.singleImageTextBubble}
+              classesBubble={
+                attachments.length === 1
+                  ? classes.singleImageTextBubble
+                  : classes.bubble
+              }
               classesText={classes.text}
               text={text}
             />
           )}
-          <OtherUserAvatar
-            otherUserUsername={otherUser.username}
-            otherUserPhotoUrl={otherUser.photoUrl}
-            classesAvatar={classes.avatar}
-          />
         </>
+      )}
+
+      {attachments && (
+        <OtherUserAvatar
+          otherUserUsername={otherUser.username}
+          otherUserPhotoUrl={otherUser.photoUrl}
+          classesAvatar={classes.avatar}
+        />
       )}
     </Box>
   );
